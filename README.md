@@ -2,7 +2,7 @@
 
 **A convolutional network trained from scratch that classifies Sentinel-2 satellite images into 10 land-cover classes, reaching 91.7% test accuracy and 91.3% on 17,000 images it never saw.**
 
-![Predictions of the final model on never-seen images](assets/predictions.png)
+![Land-cover classification with CNNs: 91.7% test accuracy, 91.3% on 17,000 never-seen images](assets/banner.png)
 
 `Python` · `TensorFlow / Keras` · `scikit-learn` · `Computer vision` · [Leer en español ↓](#español)
 
@@ -44,6 +44,13 @@ Other decisions along the way:
 - **91.3% on 17,000 never-seen images**. That almost matches the test score, so the model generalizes rather than memorizing its test set.
 - **The key finding:** more data beat every architecture change. Going from 500 to 1,000 images per class added 7.3 points, more than any other change.
 - Weakest classes on the unseen set: HerbaceousVegetation (F1 0.86) and PermanentCrop (0.85). They are visually close to other vegetation classes.
+
+<details>
+<summary><b>Sample predictions on never-seen images</b> (green = correct, red = error)</summary>
+
+![Predictions of the final model on never-seen images](assets/predictions.png)
+
+</details>
 
 ## How to run
 
